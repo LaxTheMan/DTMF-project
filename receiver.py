@@ -7,10 +7,10 @@ from settings import *
 
 def receiver():
 
-    # signal = read_signal_from_wav(
-    #     f".\\{settings.SAVE_FILE_DIR}\\{settings.SAVE_FILE_NAME}.wav")
+    signal = read_signal_from_wav(
+        f".\\{settings.SAVE_FILE_DIR}\\{settings.SAVE_FILE_NAME}.wav")
 
-    signal = read_signal_from_wav(f".\\aud\\dtmf_encoded_rec.wav")
+    # signal = read_signal_from_wav(f".\\aud\\dtmf_encoded_rec.wav")
 
     decoded_text = decode_signal(
         signal, settings.DURATION_SYMBOL, settings.SAMPLE_RATE)
