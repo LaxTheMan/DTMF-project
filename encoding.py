@@ -23,9 +23,10 @@ def encode_text(text, duration_symbol, sample_rate):
         wave = wave1 + wave2
         encoded_signal = np.concatenate((encoded_signal, wave))
 
-    normalized_signal = np.int16(
+    #Normalising signal to be stored as wav
+    normalised_signal = np.int16(
         (encoded_signal / encoded_signal.max()) * 32767)
-    return normalized_signal
+    return normalised_signal
 
 
 def decode_signal(signal, duration_symbol, sample_rate):
@@ -123,6 +124,7 @@ def generate_wave(freq, duration, sample_rate):
     return x, y
 
 
+#Using goertzel filter to extract magnitude of distinct audible frequencies
 def goertzel_filter(signal, sample_rate, target_frequency, n=None):
     k = int(0.5 + n * target_frequency / sample_rate)
     omega = 2 * np.pi * k / n
