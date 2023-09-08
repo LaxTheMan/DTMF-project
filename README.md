@@ -3,10 +3,11 @@ This python project allows you to convert text into human inaudible audio wav fi
 
 ### Usage
 
-Run sender.py and enter text to convert into audio.
-To decode wav file back to text run receiver.py and output will be displayed in terminal.
+Run ```sender.py``` and enter text to convert into audio and store under directory specified in ```settings.py``` file.
 
-Settings such as ```SAMPLE_RATE```, ```SAMPLE_DURATION```, ```SAVE_FILE_NAME```, ```SAVE_FILE_DIR``` can be changed in the settings.py file.
+To decode wav file back to text run ```receiver.py``` and output will be displayed in terminal.
+
+Settings such as ```SAMPLE_RATE```, ```SAMPLE_DURATION```, ```SAVE_FILE_NAME```, ```SAVE_FILE_DIR``` can be changed in the ```settings.py``` file.
 
 ### Prerequisites
 
